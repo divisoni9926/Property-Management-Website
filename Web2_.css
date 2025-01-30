@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root{
+    --main-color: black;
+}
+*{
+    font-family: 'Nunito' , sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size:1rem ;
+    overflow-x: hidden;/*Use overflow-x: hidden; to stop unwanted horizontal scrolling when the content exceeds the width of the container.*/
+
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track{
+    background: #444;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+body{
+    background-color: #222;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background-color: #8E1616;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+.header .logo{
+    font-weight: bolder;
+    color: #fff;
+    font-size: 2.5rem;
+}
+.header .logo span{
+    color: var(--main-color);
+
+}
+.header .navbar a{
+    font-size: 1.7rem;
+    color: #fff;
+    margin-left: 2rem;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+}
+#menu{
+   font-size: 3rem;
+   color: #fff;
+   cursor: pointer; 
+   display: none;
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+}
+
+
+@media (max-width:768px){
+    #menu{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: .1rem solid #222;
+        background-color: #333;
+    }
+
+    .header .navbar a{
+        display: flex;
+        background-color: #222;
+        border-radius: .5rem;
+        padding: 1.3rem;
+        margin: 1.3rem;
+        font-size: 2rem;
+    }
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.home .content{
+    text-align: center;
+    padding-top: 6rem;
+    margin: 2rem auto;
+    max-width: 70rem;
+}
+
+.home .content h3{
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .content h3 span{
+    color:var(--main-color) ;
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    background-color: #666;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover{
+    background-color: var(--main-color);
+}
+
+.home .home-slider .swiper-slide{
+    margin-top: 2rem;  
+    grid-template-columns: repeat(1,1fr);
+     gap: 2rem;
+     display: grid;
+     display: flex;
+}
+.home .home-slider .swiper-slide img{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
